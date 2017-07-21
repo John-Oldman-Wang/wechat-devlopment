@@ -53,7 +53,16 @@ function validateToken(req,res){
         })
     })
 }
-var webSvr = http.createServer(validateToken);
+var wechat=require('./wechat.js')
+var w=new wechat()
+w.set({
+    token:token
+})
+w.on('text',function(obj){
+    obj.Content=`you say :${obj.Content}`
+    return obj;
+})
+var webSvr = http.createServer(w);
 webSvr.listen(port,function(){
-    console.log("Start validate");
+    console.log(`server start at ${port}`);
 });

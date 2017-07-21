@@ -2,15 +2,13 @@
   "name": "weixin-sdk",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "wechat.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "multer": "^1.3.0",
     "xml2js": "^0.4.17"
   }
 }
